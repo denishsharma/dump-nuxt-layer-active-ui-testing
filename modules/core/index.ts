@@ -1,4 +1,4 @@
-import { addComponentsDir, createResolver, defineNuxtModule, useLogger } from 'nuxt/kit'
+import { addComponent, addComponentsDir, createResolver, defineNuxtModule, useLogger } from 'nuxt/kit'
 
 export default defineNuxtModule({
   meta: {
@@ -17,6 +17,11 @@ export default defineNuxtModule({
       path: resolve(runtimeDir, 'components'),
       extensions: ['vue'],
       prefix: "ActiveLayer"
+    })
+
+    await addComponent({
+      filePath: resolve('../../composers/test.composer.vue'),
+      name: "TestComposerRegisteredFromModule"
     })
   }
 })
