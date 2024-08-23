@@ -7,6 +7,16 @@ const currentDir = dirname(fileURLToPath(import.meta.url))
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: [join(currentDir, "./assets/styles/main.scss")],
+  hooks: {
+    "components:dirs": (dirs) => {
+      dirs.push({
+        path: join(currentDir, "./composers"),
+        extensions: [".composer.vue"],
+        pattern: "**/*.composer.vue",
+        prefix: "ActiveLayer",
+      })
+    }
+  },
   modules: ["@unocss/nuxt"],
   unocss: {
     nuxtLayers: true,
