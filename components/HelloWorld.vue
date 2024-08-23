@@ -6,5 +6,8 @@ const { myLayer } = useAppConfig()
   <div>
     <h1>Hello World!</h1>
     <pre>{{ myLayer }}</pre>
+    <div>
+      Does updating the layer and pushing changes to the remote repo will update depenedent projects?
+    </div>
   </div>
 </template>
