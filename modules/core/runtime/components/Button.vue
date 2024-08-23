@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-red">
     This is a button from modules/core
     <slot />
   </div>
