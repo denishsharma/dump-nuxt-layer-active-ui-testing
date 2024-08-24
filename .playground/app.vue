@@ -6,5 +6,5 @@
   <TestComposerRegisteredFromModule>
     from module???
   </TestComposerRegisteredFromModule>
-  <ActiveLayerButton />
+  <ActiveLayerButton name="hello" />
 </template>

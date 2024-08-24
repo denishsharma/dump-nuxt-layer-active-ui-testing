@@ -1,10 +1,12 @@
 <template>
   <div class=":uno: bg-red">
     This is a button from modules/core ee
-    <slot />
+    <slot>
+      <template v-if="name">{{ name }}</template>
+    </slot>
   </div>
 </template>
 
 <script lang="ts" setup>
-
+defineProps<{ name?: string }>()
 </script>
